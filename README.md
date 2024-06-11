@@ -22,7 +22,7 @@ Using nvprof, we can print the Global Memory Load Efficiency and Global Memory S
 In this kernel, the unrolling has been performed using 4 as the unrolling factor. Row major unrolling has been performed here.
 
 # tranpose_diagonal_row()
-This kernel avoids partition camping in the DRAM by allowing consecutive thread blocks to access non-consecutive data blocks. Within a single thread block, threads still access consecutive memory addresses to adhere the coalesced memory access. 
+This kernel avoids partition camping in the DRAM by allowing consecutive thread blocks to access non-consecutive data blocks using the diagonal coordinate system. Within a single thread block, threads still access consecutive memory addresses to adhere the coalesced memory access. 
 
 The above different kernels can be run by using appropriate argument while running the code.
 
