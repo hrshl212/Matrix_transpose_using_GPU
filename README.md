@@ -1,5 +1,7 @@
 # Matrix_transpose_using_GPU
-Performing matrix transpose using GPU with different methods and comparing performance. First, transpose is performed with each thread performing transpose of one element of matrix and later the unrolling option is used.
+Performing matrix transpose using GPU with different methods and comparing performance. First, transpose is performed with each thread performing transpose of one element of matrix and later the unrolling option is also implemented. 
+
+Following is the description of the different kernels within the code:
 
 # transpose_read_row_write_column()
 In the above function for matrix transpose, matrix memory reads are row major, hence coalesced memory access. Each row from the original matrix is stored in columns of transpose matrix, so memory writes are uncoalesced memory writes. Each thread performs transpose for one element of matrix.
